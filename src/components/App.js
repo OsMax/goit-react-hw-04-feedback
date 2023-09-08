@@ -38,7 +38,10 @@ function App() {
   return (
     <div className="feedbackBorder">
       <Section title="Please leave feedback">
-        <FeedbackOptions onLeaveFeedback={onLeaveFeedback} />
+        <FeedbackOptions
+          options={Object.keys({ good: good, neutral: neutral, bad: bad })}
+          onLeaveFeedback={onLeaveFeedback}
+        />
       </Section>
       <Section title="Statistics">
         {countTotalFeedback() ? (
